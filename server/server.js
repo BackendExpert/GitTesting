@@ -21,7 +21,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "1234",
-    database: "db_git_test"
+    database: "db_git_testing"
 })
 
 const app = express();

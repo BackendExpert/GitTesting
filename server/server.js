@@ -8,3 +8,12 @@ const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables
 
 const path = require('path')
+
+const resourceLimits = require('worker_threads');
+const e = require('express');
+const { stat } = require('fs');
+
+const upload = multer({ dest: 'uploads/' });
+
+const app = express();
+const PORT = process.env.PORT || 8081

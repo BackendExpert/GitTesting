@@ -15,5 +15,23 @@ const { stat } = require('fs');
 
 const upload = multer({ dest: 'uploads/' });
 
+//make connection between dbsever and node app
+
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "1234",
+    database: "project_lms"
+})
+
 const app = express();
 const PORT = process.env.PORT || 8081
+
+// start all endpoints
+
+
+
+// end all endpoints
+
+//check the server is working
+app.listen(PORT, () => console.log(`Server is Running on PORT ${PORT}`));
